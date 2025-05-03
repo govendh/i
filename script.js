@@ -23,15 +23,19 @@ function displayCart() {
 
 function orderNow() {
   if (cart.length === 0) {
-  alert("Cart is empty!");
-  return;
+    alert("Cart is empty!");
+    return;
   }
-  
-  const orderDetails = cart.map(item => `${item.name}: ₹${item.price}`).join('\n');
-  const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New Order&body=NAME:< name and address here please >\n\nOrder Details:\n\n${orderDetails}\n\nTime: ${new Date().toLocaleString()}`;
+
+  const userName = prompt("Enter your name:");
+  const userAddress = prompt("Enter your address:");
+
+  const orderDetails = cart.map(item => `${item.name}: ₹${item.price}`).join('%0A');
+  const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New%20Order&body=NAME:%20${encodeURIComponent(userName)}%20%0AADDRESS:%20${encodeURIComponent(userAddress)}%0A%0AOrder%20Details:%0A%0A${orderDetails}%0A%0ATime:%20${encodeURIComponent(new Date().toLocaleString())}`;
   
   window.location.href = mailtoLink;
-  }
+}
+
   
 
 /*  
