@@ -21,19 +21,20 @@ function displayCart() {
   });
 }
 
-/*function orderNow() {
+function orderNow() {
   if (cart.length === 0) {
   alert("Cart is empty!");
   return;
   }
   
-  const orderDetails = cart.map(item => `${item.name}: $${item.price}`).join('\n');
-  const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New Order&body=Order Details:\n${orderDetails}\nTime: ${new Date().toLocaleString()}`;
+  const orderDetails = cart.map(item => `${item.name}: ₹${item.price}`).join('\n');
+  const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New Order&body=NAME:< name and address here please >\n\nOrder Details:\n\n${orderDetails}\n\nTime: ${new Date().toLocaleString()}`;
   
   window.location.href = mailtoLink;
-  }*/
+  }
   
 
+/*  
 function orderNow() {
   if (cart.length === 0) {
     alert("Cart is empty!");
@@ -51,7 +52,7 @@ function orderNow() {
   const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New Order&body=${encodeURIComponent(mailBody)}`;
 
   window.location.href = mailtoLink;
-}
+}*/
 
 function clearCart() {
     cart = [];
