@@ -31,7 +31,7 @@ function orderNow() {
   const orderDetails = cart.map(item => `${item.name}: ₹${item.price}`).join('%0A');
 
   // Creating the mailto link with placeholders for name and address
-  const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New%20Order&body=NAME:%20<name%20here>%20%0A%0Aaddress:%20address%20here%20please>%0A%0AOrder%20Details:%0A%0A${orderDetails}%0A%0ATime:%20${encodeURIComponent(new Date().toLocaleString())}`;
+  const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New%20Order&body=NAME:%20<name%20here>%20%0A%0AAddress:%20<address%20here%20please>%0A%0AOrder%20Details:%0A%0A${orderDetails}%0A%0ATime:%20${encodeURIComponent(new Date().toLocaleString())}`;
 
   // Redirecting to the mailto link
   window.location.href = mailtoLink;
