@@ -21,7 +21,7 @@ function displayCart() {
   });
 }
 
-function orderNow() {
+/*function orderNow() {
   if (cart.length === 0) {
   alert("Cart is empty!");
   return;
@@ -31,10 +31,10 @@ function orderNow() {
   const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New Order&body=Order Details:\n${orderDetails}\nTime: ${new Date().toLocaleString()}`;
   
   window.location.href = mailtoLink;
-  }
+  }*/
   
 
-/*function orderNow() {
+function orderNow() {
   if (cart.length === 0) {
     alert("Cart is empty!");
     return;
@@ -51,7 +51,7 @@ function orderNow() {
   const mailtoLink = `mailto:govendhan4196@gmail.com?subject=New Order&body=${encodeURIComponent(mailBody)}`;
 
   window.location.href = mailtoLink;
-}*/
+}
 
 function clearCart() {
     cart = [];
